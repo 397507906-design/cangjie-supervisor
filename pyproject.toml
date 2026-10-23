@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cangjie-supervisor"
+version = "0.2.0"
+description = "Persistent fail-closed supervisor for long-running AI pipelines"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+cangjie-supervisor = "cangjie_supervisor.cli:main"
+cangjie-supervisor-service = "cangjie_supervisor.service:main"
+cangjie-remote-mock-worker = "cangjie_supervisor.remote_mock_worker:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
